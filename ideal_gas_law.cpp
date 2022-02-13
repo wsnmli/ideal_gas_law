@@ -140,7 +140,7 @@ int main() {
 
     // add controller
     if( SDL_NumJoysticks() == 0) {
-        printf("you have 0 controllers connected faggot\n");
+        printf("you have atleast one controler connected\n");
         return 0;
     } SDL_Joystick *joystick = SDL_JoystickOpen(0);
 
