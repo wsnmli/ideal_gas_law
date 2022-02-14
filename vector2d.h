@@ -33,6 +33,9 @@ public:
         this->y /= c;
     }
 
+    float magnitude() {
+        return sqrt(x*x + y*y);
+    }
 
     // Operator overloading
     Vector operator+ (Vector z) {
@@ -61,7 +64,12 @@ public:
         tmp.y = c * y;
         return tmp; 
     }
-
+    Vector operator/ (float c) {
+        Vector tmp;
+        tmp.x = x/c;
+        tmp.y = y/c;
+        return tmp;
+    }
     
     friend ostream& operator<<(ostream& os, const Vector& x);
 };
