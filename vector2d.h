@@ -41,11 +41,19 @@ public:
         tmp.y = y + z.y;
         return tmp;
     }
+    void operator+= (Vector z) {
+        x += z.x;
+        y += z.y;
+    }
     Vector operator- (Vector z) {
         Vector tmp;
         tmp.x = x - z.x;
         tmp.y = y - z.y;
         return tmp;
+    }
+    void operator-= (Vector z) {
+        x -= z.x;
+        y -= z.y;
     }
     Vector operator* (float c) {
         Vector tmp;
@@ -65,6 +73,14 @@ ostream& operator<<(ostream& os, const Vector& x) {
 
 Vector operator*(float a, Vector b) {
     return b*a;
+}
+
+int operator==(Vector a, Vector b) {
+    return (a.x == b.x && a.y == b.y);
+}
+
+int operator!=(Vector a, Vector b) {
+    return !(a==b);
 }
 
 
