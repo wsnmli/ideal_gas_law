@@ -9,6 +9,7 @@
 #define HEIGHT (800)
 
 float RandomFloat(float a, float b) {
+    // return a random float between a and b
     float random = ((float) rand()) / (float) RAND_MAX;
     float diff = b - a;
     float r = random * diff;
